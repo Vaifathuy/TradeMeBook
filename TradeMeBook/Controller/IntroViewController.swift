@@ -13,7 +13,8 @@ class IntroViewController: UIViewController {
     @IBOutlet weak var btnGetStarted: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //Register a handling function for the button 'btnGetStarted'
+        btnGetStarted.addTarget(self, action: #selector(btnClicked), for: .touchUpInside)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -28,5 +29,12 @@ class IntroViewController: UIViewController {
         }
     }
     
+    //Handling function for the button 'btnGetStarted'
+    @objc func btnClicked() {
+        let userDefault = UserDefaults.standard
+        userDefault.set(true, forKey: "OnboardingCompleted")
+        userDefault.synchronize()
+    }
 
+    
 }

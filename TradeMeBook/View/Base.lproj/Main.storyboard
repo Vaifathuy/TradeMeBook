@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tbQ-WR-zVp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -252,11 +252,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="q5u-Wj-QqW">
                                 <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ih5-sZ-j8w" userLabel="1st">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ih5-sZ-j8w" userLabel="1st View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="213.66666666666666"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fiction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0D-Nw-kv8">
-                                                <rect key="frame" x="15" y="10.000000000000002" width="73.333333333333329" height="27.666666666666671"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most-viewed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0D-Nw-kv8">
+                                                <rect key="frame" x="15" y="10" width="141.66666666666666" height="28"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="27.670000000000002" id="E7a-y7-nec"/>
                                                 </constraints>
@@ -294,7 +294,7 @@
                                             <constraint firstItem="O0D-Nw-kv8" firstAttribute="leading" secondItem="Ih5-sZ-j8w" secondAttribute="leading" constant="15" id="f3e-4L-oqU"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VL9-7R-QmC" userLabel="2nd">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VL9-7R-QmC" userLabel="2nd View">
                                         <rect key="frame" x="0.0" y="213.66666666666669" width="375" height="213.66666666666669"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Non-Fiction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeM-JH-FAU">
@@ -336,7 +336,7 @@
                                             <constraint firstItem="py8-yN-sDk" firstAttribute="leading" secondItem="VL9-7R-QmC" secondAttribute="leading" constant="16" id="e29-ti-30I"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tvh-YR-q0v" userLabel="3rd">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tvh-YR-q0v" userLabel="3rd View">
                                         <rect key="frame" x="0.0" y="427.33333333333343" width="375" height="213.66666666666669"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Science" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7f-an-F4o">
@@ -484,7 +484,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="A3O-Oh-Mcv">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ySp-Yl-0Zb" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainApp" automaticallyAdjustsScrollViewInsets="NO" id="ySp-Yl-0Zb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BXb-Fz-Wyj">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -509,7 +509,7 @@
         <scene sceneID="M6P-r8-dyP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZFz-xl-wi4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Books" id="E6t-Oh-d6U"/>
+                    <tabBarItem key="tabBarItem" title="Books" image="book_icon" id="E6t-Oh-d6U"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Id8-fA-m0F">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -566,7 +566,7 @@
         <scene sceneID="2UJ-Hr-CF0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MUW-Y2-Ltw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Community" id="5eP-js-FKt"/>
+                    <tabBarItem key="tabBarItem" title="Community" image="community_icon" id="5eP-js-FKt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QGg-XN-Tns">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -581,11 +581,11 @@
             </objects>
             <point key="canvasLocation" x="3329" y="852"/>
         </scene>
-        <!--About Us-->
+        <!--Navigation Controller-->
         <scene sceneID="ywQ-gU-fEV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qKJ-d9-Lmc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About Us" id="Paq-Qn-DzE"/>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="Paq-Qn-DzE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7V0-yr-ZEE">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -623,6 +623,8 @@
     <resources>
         <image name="Logo" width="5216" height="5216"/>
         <image name="account_icon" width="30" height="30"/>
+        <image name="book_icon" width="30" height="30"/>
+        <image name="community_icon" width="30" height="30"/>
         <image name="markets_icon" width="30" height="30"/>
     </resources>
 </document>
