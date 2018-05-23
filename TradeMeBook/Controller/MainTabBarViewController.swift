@@ -18,7 +18,7 @@ class MainTabBarViewController: UITabBarController{
     }
 
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        if userDefault.bool(forKey: "NoLoggedIn") == true{
+        if userDefault.bool(forKey: "IsLoggedIn") == false{
             if item.title == "Books" || item.title == "Account"{
                 performSegue(withIdentifier: "segue_login", sender: nil)
             }

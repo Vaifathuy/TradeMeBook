@@ -391,6 +391,8 @@
                         <viewLayoutGuide key="safeArea" id="o31-vp-uYq"/>
                     </view>
                     <navigationItem key="navigationItem" title="Markets" id="XCZ-YE-ucW"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="812"/>
                     <connections>
                         <outlet property="fictionCollectionView" destination="H9v-SS-9UE" id="wby-eE-rhr"/>
                         <outlet property="nonfictionCollectionView" destination="py8-yN-sDk" id="gfm-Og-LU8"/>
@@ -593,7 +595,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7k-WG-Gur">
                                 <rect key="frame" x="135" y="518" width="105" height="47"/>
@@ -753,7 +755,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fMx-tV-qLj">
                                 <rect key="frame" x="37" y="478" width="301" height="30"/>
@@ -763,7 +765,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the house" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pND-fp-lHu">
                                 <rect key="frame" x="101.66666666666669" y="106" width="172" height="21"/>
@@ -908,7 +910,6 @@
         <image name="markets_icon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iV8-RK-idG"/>
         <segue reference="GMW-6h-Yvg"/>
         <segue reference="MV8-Td-NYC"/>
     </inferredMetricsTieBreakers>

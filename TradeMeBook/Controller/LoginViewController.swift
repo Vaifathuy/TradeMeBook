@@ -35,18 +35,22 @@ class LoginViewController: UIViewController {
     //Handling function to btnLogIn
     @objc func doLogIn(){
         if (txtUserName.text?.contains(defaultUserName))! && (txtPassword.text?.contains(defaultPassword))!{
-            userDefault.set(false, forKey: "NoLoggedIn")
+            userDefault.set(true, forKey: "IsLoggedIn")
             userDefault.synchronize()
-            appDelegate.loggedUserName = txtUserName.text!
-            appDelegate.loggedPwd = txtPassword.text!
             print("Successfully Logged In")
             performSegue(withIdentifier: "Login-TabBar", sender: nil)
         }else {
+            showMessage(title: "Log in failed", msg: "Incorrect username or password")
             print("Failed to log in...")
             return
         }
     }
     
-    
+    private func showMessage(title: String, msg: String){
+        let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
     
 }
