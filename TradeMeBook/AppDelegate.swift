@@ -12,7 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var loggedUserName: String = ""
+    var loggedPwd: String = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -22,9 +23,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         var rootVC = storyBoard.instantiateViewController(withIdentifier: "Onboarding")
         
+        //UserDefault
         let userDefault = UserDefaults.standard
-        if(userDefault.bool(forKey: "OnboardingCompleted")){
+        if userDefault.bool(forKey: "OnboardingCompleted") {
             rootVC = storyBoard.instantiateViewController(withIdentifier: "MainApp")
+        }
+    
+        if loggedUserName.isEmpty && loggedPwd.isEmpty {
+            userDefault.set(true, forKey: "NoLoggedIn")
+            userDefault.synchronize()
+        }else{
+            userDefault.set(false, forKey: "NoLoggedIn")
+            userDefault.synchronize()
         }
         
         window?.rootViewController = rootVC

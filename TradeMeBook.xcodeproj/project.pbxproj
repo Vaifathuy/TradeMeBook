@@ -16,6 +16,8 @@
 		1EA59E3220B25BA00008031E /* Book_Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EA59E3120B25BA00008031E /* Book_Cell.xib */; };
 		1EA59E3720B25E100008031E /* Book_CellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA59E3620B25E100008031E /* Book_CellCollectionViewCell.swift */; };
 		1EAA150020B1DA5E00CF1CCD /* MarketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA14FF20B1DA5E00CF1CCD /* MarketsViewController.swift */; };
+		1ECD0A7220B4878A00528F74 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD0A7120B4878A00528F74 /* MainTabBarViewController.swift */; };
+		1EE3A92E20B52984008BB95A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3A92D20B52984008BB95A /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		1EA59E3120B25BA00008031E /* Book_Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Book_Cell.xib; sourceTree = "<group>"; };
 		1EA59E3620B25E100008031E /* Book_CellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book_CellCollectionViewCell.swift; sourceTree = "<group>"; };
 		1EAA14FF20B1DA5E00CF1CCD /* MarketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsViewController.swift; sourceTree = "<group>"; };
+		1ECD0A7120B4878A00528F74 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		1EE3A92D20B52984008BB95A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 		1E8D222C20B024720010A5AF /* TradeMeBook */ = {
 			isa = PBXGroup;
 			children = (
+				1E8D222D20B024720010A5AF /* AppDelegate.swift */,
 				1EA59E3320B25DA70008031E /* CustomCells */,
 				1E8D224120B0250E0010A5AF /* Controller */,
 				1E8D224020B025080010A5AF /* View */,
@@ -91,10 +96,11 @@
 		1E8D224120B0250E0010A5AF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1E8D222D20B024720010A5AF /* AppDelegate.swift */,
 				1E8D224220B026210010A5AF /* RootPageViewController.swift */,
 				1E8D224420B0284E0010A5AF /* IntroViewController.swift */,
 				1EAA14FF20B1DA5E00CF1CCD /* MarketsViewController.swift */,
+				1ECD0A7120B4878A00528F74 /* MainTabBarViewController.swift */,
+				1EE3A92D20B52984008BB95A /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -180,9 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EE3A92E20B52984008BB95A /* LoginViewController.swift in Sources */,
 				1EA59E3720B25E100008031E /* Book_CellCollectionViewCell.swift in Sources */,
 				1EAA150020B1DA5E00CF1CCD /* MarketsViewController.swift in Sources */,
 				1E8D224520B0284E0010A5AF /* IntroViewController.swift in Sources */,
+				1ECD0A7220B4878A00528F74 /* MainTabBarViewController.swift in Sources */,
 				1E8D222E20B024720010A5AF /* AppDelegate.swift in Sources */,
 				1E8D224320B026210010A5AF /* RootPageViewController.swift in Sources */,
 			);
