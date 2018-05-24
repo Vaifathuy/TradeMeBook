@@ -10,13 +10,17 @@ import UIKit
 
 class MarketsViewController: UIViewController,UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout{
 
+    @IBOutlet weak var selfhelpCollectionView: UICollectionView!
+    @IBOutlet weak var horrorCollectionView: UICollectionView!
     @IBOutlet weak var scienceCollectionView: UICollectionView!
     @IBOutlet weak var nonfictionCollectionView: UICollectionView!
     @IBOutlet weak var fictionCollectionView: UICollectionView!
     
-    let bookImgs_fiction = [#imageLiteral(resourceName: "eleanor"),#imageLiteral(resourceName: "thehungergame"),#imageLiteral(resourceName: "fangirl"),#imageLiteral(resourceName: "theinfinitesea"),#imageLiteral(resourceName: "thefaultinourstar")]
-    let bookImgs_nonfiction = [#imageLiteral(resourceName: "stevejobs"),#imageLiteral(resourceName: "thespace"),#imageLiteral(resourceName: "national"),#imageLiteral(resourceName: "diana"),#imageLiteral(resourceName: "god")]
-    let bookImgs_science = [#imageLiteral(resourceName: "brainfood"),#imageLiteral(resourceName: "unlimited"),#imageLiteral(resourceName: "thisisgoingtohurt"),#imageLiteral(resourceName: "stephen"),#imageLiteral(resourceName: "elonmusk")]
+    let bookImgs_fiction = [#imageLiteral(resourceName: "eleanor"),#imageLiteral(resourceName: "thehungergame"),#imageLiteral(resourceName: "fangirl"),#imageLiteral(resourceName: "theinfinitesea"),#imageLiteral(resourceName: "ritual_nevill"),#imageLiteral(resourceName: "theexorcist"),#imageLiteral(resourceName: "thesentinel"),#imageLiteral(resourceName: "the7habits"),#imageLiteral(resourceName: "followMe"),#imageLiteral(resourceName: "stephen")]
+    let bookImgs_nonfiction = [#imageLiteral(resourceName: "stevejobs"),#imageLiteral(resourceName: "thespace"),#imageLiteral(resourceName: "national"),#imageLiteral(resourceName: "diana"),#imageLiteral(resourceName: "god"),#imageLiteral(resourceName: "stephen"),#imageLiteral(resourceName: "thisisgoingtohurt"),#imageLiteral(resourceName: "brainfood"),#imageLiteral(resourceName: "elonmusk")]
+    let bookImgs_science = [#imageLiteral(resourceName: "brainfood"),#imageLiteral(resourceName: "unlimited"),#imageLiteral(resourceName: "thisisgoingtohurt"),#imageLiteral(resourceName: "stephen"),#imageLiteral(resourceName: "elonmusk"),#imageLiteral(resourceName: "howtostopworrying"),#imageLiteral(resourceName: "improveyoursocialskill"),#imageLiteral(resourceName: "threehorror"),#imageLiteral(resourceName: "thescienceofgettingrich"),#imageLiteral(resourceName: "god")]
+    let bookImgs_horror = [#imageLiteral(resourceName: "houseoffear"),#imageLiteral(resourceName: "followMe"),#imageLiteral(resourceName: "theexorcist"),#imageLiteral(resourceName: "thesentinel"),#imageLiteral(resourceName: "wearealwayswatching"),#imageLiteral(resourceName: "threehorror"),#imageLiteral(resourceName: "atozhorror"),#imageLiteral(resourceName: "ritual_nevill")]
+    let bookImgs_selfhelp = [#imageLiteral(resourceName: "the7habits"),#imageLiteral(resourceName: "goodtogreat"),#imageLiteral(resourceName: "behappy"),#imageLiteral(resourceName: "ashortcourse"),#imageLiteral(resourceName: "improveyoursocialskill"),#imageLiteral(resourceName: "howtostopworrying"),#imageLiteral(resourceName: "thescienceofgettingrich"),#imageLiteral(resourceName: "elonmusk"),#imageLiteral(resourceName: "national")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,14 +32,20 @@ class MarketsViewController: UIViewController,UICollectionViewDataSource ,UIColl
         fictionCollectionView.register(bookCustomCell, forCellWithReuseIdentifier: "book_cell")
         nonfictionCollectionView.register(bookCustomCell, forCellWithReuseIdentifier: "book_cell")
         scienceCollectionView.register(bookCustomCell, forCellWithReuseIdentifier: "book_cell")
+        horrorCollectionView.register(bookCustomCell, forCellWithReuseIdentifier: "book_cell")
+        selfhelpCollectionView.register(bookCustomCell, forCellWithReuseIdentifier: "book_cell")
         //Register datasource to collectionViews
         fictionCollectionView.dataSource = self
         nonfictionCollectionView.dataSource = self
         scienceCollectionView.dataSource = self
+        horrorCollectionView.dataSource = self
+        selfhelpCollectionView.dataSource = self
         //Register delegate to collectionViews
         fictionCollectionView.delegate = self
         nonfictionCollectionView.delegate = self
         scienceCollectionView.delegate = self
+        horrorCollectionView.delegate = self
+        selfhelpCollectionView.delegate = self
     }
     
     func setupNavBar() {
@@ -51,8 +61,12 @@ class MarketsViewController: UIViewController,UICollectionViewDataSource ,UIColl
             return bookImgs_fiction.count
         }else if collectionView == nonfictionCollectionView {
             return bookImgs_nonfiction.count
-        }else{
+        }else if collectionView == scienceCollectionView {
             return bookImgs_science.count
+        }else if collectionView == horrorCollectionView {
+            return bookImgs_horror.count
+        }else {
+            return bookImgs_selfhelp.count
         }
     }
     
@@ -65,8 +79,14 @@ class MarketsViewController: UIViewController,UICollectionViewDataSource ,UIColl
         }else if collectionView == nonfictionCollectionView {
             let img = bookImgs_nonfiction[indexPath.row]
             cell.bookImg.image = img
-        }else {
+        }else if collectionView == scienceCollectionView {
             let img = bookImgs_science[indexPath.row]
+            cell.bookImg.image = img
+        }else if collectionView == horrorCollectionView {
+            let img = bookImgs_horror[indexPath.row]
+            cell.bookImg.image = img
+        }else {
+            let img = bookImgs_selfhelp[indexPath.row]
             cell.bookImg.image = img
         }
         return cell
