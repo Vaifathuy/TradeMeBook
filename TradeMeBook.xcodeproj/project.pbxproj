@@ -17,6 +17,7 @@
 		1EA59E3720B25E100008031E /* Book_CellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA59E3620B25E100008031E /* Book_CellCollectionViewCell.swift */; };
 		1EAA150020B1DA5E00CF1CCD /* MarketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA14FF20B1DA5E00CF1CCD /* MarketsViewController.swift */; };
 		1ECD0A7220B4878A00528F74 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD0A7120B4878A00528F74 /* MainTabBarViewController.swift */; };
+		1ECF2A7020B6EB34000CF2D8 /* UserDefaultExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECF2A6F20B6EB34000CF2D8 /* UserDefaultExtend.swift */; };
 		1EE3A92E20B52984008BB95A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3A92D20B52984008BB95A /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		1EA59E3620B25E100008031E /* Book_CellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book_CellCollectionViewCell.swift; sourceTree = "<group>"; };
 		1EAA14FF20B1DA5E00CF1CCD /* MarketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsViewController.swift; sourceTree = "<group>"; };
 		1ECD0A7120B4878A00528F74 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		1ECF2A6F20B6EB34000CF2D8 /* UserDefaultExtend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtend.swift; sourceTree = "<group>"; };
 		1EE3A92D20B52984008BB95A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				1E8D222D20B024720010A5AF /* AppDelegate.swift */,
+				1ECF2A6F20B6EB34000CF2D8 /* UserDefaultExtend.swift */,
 				1EA59E3320B25DA70008031E /* CustomCells */,
 				1E8D224120B0250E0010A5AF /* Controller */,
 				1E8D224020B025080010A5AF /* View */,
@@ -192,6 +195,7 @@
 				1E8D224520B0284E0010A5AF /* IntroViewController.swift in Sources */,
 				1ECD0A7220B4878A00528F74 /* MainTabBarViewController.swift in Sources */,
 				1E8D222E20B024720010A5AF /* AppDelegate.swift in Sources */,
+				1ECF2A7020B6EB34000CF2D8 /* UserDefaultExtend.swift in Sources */,
 				1E8D224320B026210010A5AF /* RootPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

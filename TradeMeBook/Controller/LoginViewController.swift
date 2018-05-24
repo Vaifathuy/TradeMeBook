@@ -35,8 +35,7 @@ class LoginViewController: UIViewController {
     //Handling function to btnLogIn
     @objc func doLogIn(){
         if (txtUserName.text?.contains(defaultUserName))! && (txtPassword.text?.contains(defaultPassword))!{
-            userDefault.set(true, forKey: "IsLoggedIn")
-            userDefault.synchronize()
+            UserDefaults.standard.setIsLoggedIn(value: true)
             print("Successfully Logged In")
             performSegue(withIdentifier: "Login-TabBar", sender: nil)
         }else {

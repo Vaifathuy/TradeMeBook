@@ -31,9 +31,7 @@ class IntroViewController: UIViewController {
     
     //Handling function for the button 'btnGetStarted'
     @objc func btnClicked() {
-        let userDefault = UserDefaults.standard
-        userDefault.set(true, forKey: "OnboardingCompleted")
-        userDefault.synchronize()
+        UserDefaults.standard.setOnboardingCompleted(value: true)
     }
 
     
