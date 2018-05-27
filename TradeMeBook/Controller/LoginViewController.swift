@@ -23,16 +23,27 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchData()
-        
+        gestureManagment()
         //Register btnLogIn
         btnLogIn.addTarget(self, action: #selector(doLogIn), for: .touchUpInside)
+    }
         
+    private func gestureManagment(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(gestureHandler(gesture:)))
+        tapGesture.numberOfTapsRequired = 1
+        view.addGestureRecognizer(tapGesture)
     }
     
-    @IBAction func btnClose(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+    @objc func gestureHandler(gesture: UITapGestureRecognizer){
+        if gesture.numberOfTapsRequired == 1 {
+            if txtUserName.isEditing == true {
+                txtUserName.resignFirstResponder()
+            } else if txtPassword.isEditing == true {
+                txtPassword.resignFirstResponder()
+            }
+        }
+        print("Tap")
     }
-    
     
     private func fetchData(){
         //retrieve data from API
