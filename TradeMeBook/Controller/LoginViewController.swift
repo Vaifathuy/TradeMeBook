@@ -10,6 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    
     @IBOutlet weak var btnLogIn: UIButton!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtUserName: UITextField!
@@ -27,6 +28,11 @@ class LoginViewController: UIViewController {
         btnLogIn.addTarget(self, action: #selector(doLogIn), for: .touchUpInside)
         
     }
+    
+    @IBAction func btnClose(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     private func fetchData(){
         //retrieve data from API

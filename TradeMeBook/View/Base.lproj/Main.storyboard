@@ -825,7 +825,7 @@
                                 </constraints>
                                 <state key="normal" image="btnClose"/>
                                 <connections>
-                                    <segue destination="ySp-Yl-0Zb" kind="show" identifier="Login-TabBar" id="MV8-Td-NYC"/>
+                                    <action selector="btnClose:" destination="BB7-tV-8j4" eventType="touchUpInside" id="Uad-8S-IcH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1118,7 +1118,6 @@
         <image name="topup-ico" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GMW-6h-Yvg"/>
-        <segue reference="MV8-Td-NYC"/>
+        <segue reference="cbO-DK-8uo"/>
     </inferredMetricsTieBreakers>
 </document>
