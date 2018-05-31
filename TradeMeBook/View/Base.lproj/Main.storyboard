@@ -529,18 +529,35 @@
         <!--Books-->
         <scene sceneID="G4d-2n-oai">
             <objects>
-                <viewController storyboardIdentifier="Books" id="Bat-tg-NjC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Books" id="Bat-tg-NjC" customClass="BooksViewController" customModule="TradeMeBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="01K-pD-qLM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6ny-8e-5WN">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6ny-8e-5WN" firstAttribute="leading" secondItem="BgH-4Z-XQR" secondAttribute="leading" id="7Ka-z5-zzf"/>
+                            <constraint firstItem="6ny-8e-5WN" firstAttribute="trailing" secondItem="BgH-4Z-XQR" secondAttribute="trailing" id="CAU-wo-VfL"/>
+                            <constraint firstItem="6ny-8e-5WN" firstAttribute="top" secondItem="BgH-4Z-XQR" secondAttribute="top" id="MGJ-fB-Hcc"/>
+                            <constraint firstItem="6ny-8e-5WN" firstAttribute="bottom" secondItem="BgH-4Z-XQR" secondAttribute="bottom" id="MM5-Ie-LRr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BgH-4Z-XQR"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Books" id="OYq-rb-Dk6"/>
+                    <navigationItem key="navigationItem" title="Books" id="OYq-rb-Dk6">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="FYj-3e-crz"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bookTableView" destination="6ny-8e-5WN" id="UKN-hg-uJP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Udm-rb-DZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4006" y="-604"/>
+            <point key="canvasLocation" x="4005" y="-604.22535211267609"/>
         </scene>
         <!--Account-->
         <scene sceneID="5W0-kd-KAW">
@@ -1127,7 +1144,7 @@
         <image name="topup-ico" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GMW-6h-Yvg"/>
+        <segue reference="cbO-DK-8uo"/>
         <segue reference="3E2-lM-wtl"/>
     </inferredMetricsTieBreakers>
 </document>

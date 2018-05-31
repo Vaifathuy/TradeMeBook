@@ -27,13 +27,13 @@ class MarketsViewController: UIViewController,UICollectionViewDataSource ,UIColl
         setupNavBar()
         
         //Load custom cell
-        let bookCustomCell = UINib(nibName: "Book_Cell", bundle: nil)
-        //Register to collectionView
-        fictionCollectionView.register(bookCustomCell, forCellWithReuseIdentifier: "book_cell")
-        nonfictionCollectionView.register(bookCustomCell, forCellWithReuseIdentifier: "book_cell")
-        scienceCollectionView.register(bookCustomCell, forCellWithReuseIdentifier: "book_cell")
-        horrorCollectionView.register(bookCustomCell, forCellWithReuseIdentifier: "book_cell")
-        selfhelpCollectionView.register(bookCustomCell, forCellWithReuseIdentifier: "book_cell")
+        let nibFile = UINib(nibName: "Book_Cell", bundle: nil)
+        //Register nibFile to collectionView
+        fictionCollectionView.register(nibFile, forCellWithReuseIdentifier: "book_cell")
+        nonfictionCollectionView.register(nibFile, forCellWithReuseIdentifier: "book_cell")
+        scienceCollectionView.register(nibFile, forCellWithReuseIdentifier: "book_cell")
+        horrorCollectionView.register(nibFile, forCellWithReuseIdentifier: "book_cell")
+        selfhelpCollectionView.register(nibFile, forCellWithReuseIdentifier: "book_cell")
         //Register datasource to collectionViews
         fictionCollectionView.dataSource = self
         nonfictionCollectionView.dataSource = self
