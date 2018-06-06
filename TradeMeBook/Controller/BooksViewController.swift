@@ -12,13 +12,7 @@ class BooksViewController: UIViewController, UITableViewDataSource{
 
     @IBOutlet weak var bookTableView: UITableView!
     
-    //Testing models
-    let bookCover = [#imageLiteral(resourceName: "thisisgoingtohurt"),#imageLiteral(resourceName: "stephen"),#imageLiteral(resourceName: "thespace"),#imageLiteral(resourceName: "eleanor"),#imageLiteral(resourceName: "elonmusk"),#imageLiteral(resourceName: "brainfood"),#imageLiteral(resourceName: "thescienceofgettingrich"),#imageLiteral(resourceName: "stevejobs"),#imageLiteral(resourceName: "improveyoursocialskill")]
-    let bookTitle = ["This is going to hurt", "Stephen Hawlking", "The Space Barons", "Eleanor","Elonmusk","BrainFoods","The Science of getting rich","Steve Jobs","Improve your social skill"]
-    let authorName = ["John Green","John Green","John Green","John Green","John Green","John Green","John Green","John Green","John Green"]
-    let date = ["18-May-18","19-May-18","20-May-18","01-June-18","05-June-18","18-June-18","19-June-18","20-June-18","20-June-18"]
-    let ISBN = ["9182765431231","8765490123789","0425618791700","9342516789011","9182765431231","9182765431231","9182765431231","9182765431231","9182765431231"]
-    let genres = ["Horror,Romance,Novel", "Novel,Romance,Horror","Novel,Romance,Horror","Novel,Romance,Horror","Novel,Romance,Horror","Novel,Romance,Horror","Novel,Romance,Horror","Novel,Romance,Horror","Novel,Romance,Horror"]
+    var bookList = [Book]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +24,14 @@ class BooksViewController: UIViewController, UITableViewDataSource{
         //Load nib File
         let nibFile = UINib(nibName: "Book_TableCell", bundle: nil)
         bookTableView.register(nibFile, forCellReuseIdentifier: "tableCell_Book")
+        
+        let book1 = Book(bookID: 1, bookTitle: "Stephen Hawlking", bookCover: "stephen", authorName: "John Green", date: "18-May-18", ISBN: "9182765431231", bookGenres: "Horror,Romance,Novel")
+        let book2 = Book(bookID: 2, bookTitle: "Stephen Hawlking", bookCover: "stephen", authorName: "John Green", date: "18-May-18", ISBN: "9182765456231", bookGenres: "Novel,Fiction,Horror")
+        let book3 = Book(bookID: 3, bookTitle: "Stephen Hawlking", bookCover: "stephen", authorName: "John Green", date: "18-May-18", ISBN: "9182765439999", bookGenres: "Science,Romance")
+        
+        bookList.append(book1)
+        bookList.append(book2)
+        bookList.append(book3)
     }
 
     func setupNavBar() {
@@ -40,19 +42,44 @@ class BooksViewController: UIViewController, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bookCover.count
+        return bookList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {    
         let customTableCell = tableView.dequeueReusableCell(withIdentifier: "tableCell_Book") as! BookTableViewCell
         
-        customTableCell.bookTitle.text = bookTitle[indexPath.row]
-        customTableCell.bookCoverImg.image = bookCover[indexPath.row]
-        customTableCell.ISBN.text = ISBN[indexPath.row]
-        customTableCell.authorName.text = authorName[indexPath.row]
-        customTableCell.addedDate.text = date[indexPath.row]
-        customTableCell.genres = self.genres
+        customTableCell.bookTitle.text = bookList[indexPath.row].bookTitle
+        customTableCell.bookCoverImg.image = UIImage(named: bookList[indexPath.row].bookCover)
+        customTableCell.ISBN.text = bookList[indexPath.row].ISBN
+        customTableCell.authorName.text = bookList[indexPath.row].authorName
+        customTableCell.addedDate.text = bookList[indexPath.row].date
+        
+        let temp = self.splitString(bookList[indexPath.row].bookGenres)
+        if temp.count == 3 {
+            customTableCell.genresText_1.isHidden = false
+            customTableCell.genresText_2.isHidden = false
+            customTableCell.genresText_3.isHidden = false
+            customTableCell.genresText_1.text = "\(temp[0])"
+            customTableCell.genresText_2.text = "\(temp[1])"
+            customTableCell.genresText_3.text = "\(temp[2])"
+        }else if temp.count == 2{
+            customTableCell.genresText_1.isHidden = false
+            customTableCell.genresText_2.isHidden = false
+            customTableCell.genresText_3.isHidden = true
+            customTableCell.genresText_1.text = "\(temp[0])"
+            customTableCell.genresText_2.text = "\(temp[1])"
+        }else if temp.count == 1{
+            customTableCell.genresText_1.isHidden = false
+            customTableCell.genresText_2.isHidden = true
+            customTableCell.genresText_3.isHidden = true
+            customTableCell.genresText_1.text = "\(temp[0])"
+        }
         
         return customTableCell
     }
+    
+    private func splitString(_ data: String) -> [Substring]{
+        return data.split(separator: ",")
+    }
+    
 }
