@@ -23,6 +23,8 @@
 		1ECF2A7020B6EB34000CF2D8 /* UserDefaultExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECF2A6F20B6EB34000CF2D8 /* UserDefaultExtend.swift */; };
 		1EDA189220BA7B1F007CB0A9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDA189120BA7B1F007CB0A9 /* SignUpViewController.swift */; };
 		1EE3A92E20B52984008BB95A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3A92D20B52984008BB95A /* LoginViewController.swift */; };
+		E8325DE920C9568100B2BAA6 /* StaticBookUploadTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8325DE820C9568100B2BAA6 /* StaticBookUploadTableViewController.swift */; };
+		E883C46320C8C8A800E49696 /* BookUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883C46220C8C8A800E49696 /* BookUploadViewController.swift */; };
 		E8DF0D6D20C55FA600190AA1 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF0D6C20C55FA600190AA1 /* Book.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		1ECF2A6F20B6EB34000CF2D8 /* UserDefaultExtend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtend.swift; sourceTree = "<group>"; };
 		1EDA189120BA7B1F007CB0A9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1EE3A92D20B52984008BB95A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E8325DE820C9568100B2BAA6 /* StaticBookUploadTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticBookUploadTableViewController.swift; sourceTree = "<group>"; };
+		E883C46220C8C8A800E49696 /* BookUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookUploadViewController.swift; sourceTree = "<group>"; };
 		E8DF0D6C20C55FA600190AA1 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +131,8 @@
 				1EE3A92D20B52984008BB95A /* LoginViewController.swift */,
 				1EDA189120BA7B1F007CB0A9 /* SignUpViewController.swift */,
 				1E516D3A20BD80780037ED69 /* BooksViewController.swift */,
+				E883C46220C8C8A800E49696 /* BookUploadViewController.swift */,
+				E8325DE820C9568100B2BAA6 /* StaticBookUploadTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,12 +225,14 @@
 				1E8D224520B0284E0010A5AF /* IntroViewController.swift in Sources */,
 				1ECD0A7220B4878A00528F74 /* MainTabBarViewController.swift in Sources */,
 				1E516D3B20BD80780037ED69 /* BooksViewController.swift in Sources */,
+				E883C46320C8C8A800E49696 /* BookUploadViewController.swift in Sources */,
 				1E8D222E20B024720010A5AF /* AppDelegate.swift in Sources */,
 				1EDA189220BA7B1F007CB0A9 /* SignUpViewController.swift in Sources */,
 				1ECF2A7020B6EB34000CF2D8 /* UserDefaultExtend.swift in Sources */,
 				1E17329920BC325700E350F5 /* BookTableViewCell.swift in Sources */,
 				E8DF0D6D20C55FA600190AA1 /* Book.swift in Sources */,
 				1E8D224320B026210010A5AF /* RootPageViewController.swift in Sources */,
+				E8325DE920C9568100B2BAA6 /* StaticBookUploadTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
