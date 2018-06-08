@@ -569,14 +569,14 @@
             <objects>
                 <viewController id="v2E-Y7-fkl" customClass="BookUploadViewController" customModule="TradeMeBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="APX-rZ-aYx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="750"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ldu-OC-rfp">
-                                <rect key="frame" x="0.0" y="64" width="320" height="736"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="686"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iA4-L4-0JC" userLabel="MainView">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
                                         <subviews>
                                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="elU-8X-X5w" userLabel="BookCoverView">
                                                 <rect key="frame" x="91" y="12" width="138" height="200"/>
@@ -604,7 +604,7 @@
                                                 </connections>
                                             </containerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhP-eo-yZy">
-                                                <rect key="frame" x="100" y="458" width="120" height="35"/>
+                                                <rect key="frame" x="100" y="454" width="120" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="Oml-kG-hu9"/>
                                                     <constraint firstAttribute="height" constant="35" id="cHC-hI-XSx"/>
@@ -614,7 +614,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C0o-8l-M9V">
-                                                <rect key="frame" x="8" y="505" width="304" height="180"/>
+                                                <rect key="frame" x="8" y="501" width="304" height="180"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="g7c-qt-tYw">
                                                         <rect key="frame" x="6" y="0.0" width="292" height="175"/>
@@ -637,14 +637,14 @@
                                         <constraints>
                                             <constraint firstItem="C0o-8l-M9V" firstAttribute="top" secondItem="yhP-eo-yZy" secondAttribute="bottom" constant="12" id="0Oo-62-Ezg"/>
                                             <constraint firstItem="4cH-nC-yjZ" firstAttribute="leading" secondItem="iA4-L4-0JC" secondAttribute="leading" constant="5" id="8rg-IL-AV6"/>
-                                            <constraint firstItem="yhP-eo-yZy" firstAttribute="top" secondItem="4cH-nC-yjZ" secondAttribute="bottom" constant="12" id="CNr-Ef-p5s"/>
+                                            <constraint firstItem="yhP-eo-yZy" firstAttribute="top" secondItem="4cH-nC-yjZ" secondAttribute="bottom" constant="8" id="CNr-Ef-p5s"/>
                                             <constraint firstItem="4cH-nC-yjZ" firstAttribute="centerX" secondItem="iA4-L4-0JC" secondAttribute="centerX" id="Iyz-mS-pTf"/>
                                             <constraint firstAttribute="trailing" secondItem="4cH-nC-yjZ" secondAttribute="trailing" constant="5" id="JtP-lQ-48c"/>
                                             <constraint firstItem="C0o-8l-M9V" firstAttribute="centerX" secondItem="iA4-L4-0JC" secondAttribute="centerX" id="NfV-G5-saW"/>
                                             <constraint firstItem="elU-8X-X5w" firstAttribute="centerX" secondItem="iA4-L4-0JC" secondAttribute="centerX" id="Pay-Fm-60D"/>
                                             <constraint firstItem="4cH-nC-yjZ" firstAttribute="top" secondItem="elU-8X-X5w" secondAttribute="bottom" constant="12" id="QLV-1p-Uk7"/>
                                             <constraint firstItem="elU-8X-X5w" firstAttribute="top" secondItem="iA4-L4-0JC" secondAttribute="top" constant="12" id="kS1-17-yUU"/>
-                                            <constraint firstAttribute="height" constant="800" id="w1H-1e-7dc"/>
+                                            <constraint firstAttribute="height" constant="700" id="w1H-1e-7dc"/>
                                             <constraint firstItem="yhP-eo-yZy" firstAttribute="centerX" secondItem="iA4-L4-0JC" secondAttribute="centerX" id="ybm-8z-c2z"/>
                                         </constraints>
                                     </view>
@@ -682,7 +682,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <size key="freeformSize" width="320" height="800"/>
+                    <size key="freeformSize" width="320" height="750"/>
                     <connections>
                         <outlet property="bookCover" destination="bHT-tm-b9Z" id="MTT-el-6Zs"/>
                         <outlet property="bookCoverView" destination="elU-8X-X5w" id="b6M-AR-EUn"/>

@@ -28,6 +28,7 @@ class BookUploadViewController: UIViewController, UIImagePickerControllerDelegat
         print("Tapped--BookCoverView")
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
+        
         let alertController = UIAlertController(title: "Photo Source", message: "Upload BookCover", preferredStyle: .actionSheet)
         let alertActionTakePhoto = UIAlertAction(title: "Take a photo", style: .default) { (completed) in
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -41,7 +42,8 @@ class BookUploadViewController: UIViewController, UIImagePickerControllerDelegat
             imagePicker.sourceType = .photoLibrary
             self.present(imagePicker, animated: true, completion: nil)
         }
-    let alertActionCancel = UIAlertAction(title: "Cancel", style: .cancel) 
+        let alertActionCancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
         alertController.addAction(alertActionTakePhoto)
         alertController.addAction(alertActionLibrary)
         alertController.addAction(alertActionCancel)
