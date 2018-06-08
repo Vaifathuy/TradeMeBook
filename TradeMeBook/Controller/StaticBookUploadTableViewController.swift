@@ -24,11 +24,11 @@ class StaticBookUploadTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cellProp([titleCell,authorCell,ISBNCell,langCell,genresCell])
+        setupCellProp([titleCell,authorCell,ISBNCell,langCell,genresCell])
         
     }
     
-    private func cellProp(_ cell: [UITableViewCell]){
+    private func setupCellProp(_ cell: [UITableViewCell]){
         for c in cell {
             c.layer.cornerRadius = 16
             c.layer.borderWidth = 1
