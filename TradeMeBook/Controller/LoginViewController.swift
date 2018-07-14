@@ -23,12 +23,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchData()
-        gestureManagment()
+        gestureManagement()
         //Register btnLogIn
         btnLogIn.addTarget(self, action: #selector(doLogIn), for: .touchUpInside)
     }
         
-    private func gestureManagment(){
+    private func gestureManagement(){
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(gestureHandler(gesture:)))
         tapGesture.numberOfTapsRequired = 1
         view.addGestureRecognizer(tapGesture)

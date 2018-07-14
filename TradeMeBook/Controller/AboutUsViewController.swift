@@ -17,6 +17,7 @@ class AboutUsViewController: UIViewController {
         super.viewDidLoad()
         
         initCustomNavBar()
+        
         ourTeamTextView.layer.cornerRadius = 16.0
         ourTeamTextView.layer.borderColor = UIColor.orange.cgColor
         ourTeamTextView.layer.borderWidth = 1
@@ -33,6 +34,7 @@ class AboutUsViewController: UIViewController {
     
     func initCustomNavBar(){
         self.navigationItem.title = "About Us"
+        self.navigationController?.navigationBar.tintColor = UIColor.orange
     }
 }
 

@@ -17,7 +17,6 @@ class BookUploadViewController: UIViewController, UIImagePickerControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         setupProps([descLabel,descTextArea])
-        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(uploadBookCover))
         bookCoverView.isUserInteractionEnabled = true
         bookCoverView.addGestureRecognizer(tapGesture)
@@ -82,6 +81,6 @@ class BookUploadViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBAction func cancelButton(_ sender: Any) {
         print("pressed--Cancel")
-        self.dismiss(animated:true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
 }

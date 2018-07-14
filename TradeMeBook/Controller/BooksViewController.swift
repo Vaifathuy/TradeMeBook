@@ -8,8 +8,8 @@
 
 import UIKit
 
-class BooksViewController: UIViewController, UITableViewDataSource{
-
+class BooksViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBOutlet weak var bookTableView: UITableView!
     
     var bookList = [Book]()
@@ -19,15 +19,16 @@ class BooksViewController: UIViewController, UITableViewDataSource{
         setupNavBar()
         if UserDefaults.standard.isLoggedIn() == true{
             bookTableView.dataSource = self
+            bookTableView.delegate = self
         }
         
         //Load nib File
         let nibFile = UINib(nibName: "Book_TableCell", bundle: nil)
         bookTableView.register(nibFile, forCellReuseIdentifier: "tableCell_Book")
         
-        let book1 = Book(bookID: 1, bookTitle: "Stephen Hawlking", bookCover: "stephen", authorName: "John Green", date: "18-May-18", ISBN: "9182765431231", bookGenres: "Horror,Romance,Novel")
-        let book2 = Book(bookID: 2, bookTitle: "Stephen Hawlking", bookCover: "stephen", authorName: "John Green", date: "18-May-18", ISBN: "9182765456231", bookGenres: "Novel,Fiction,Horror")
-        let book3 = Book(bookID: 3, bookTitle: "Stephen Hawlking", bookCover: "stephen", authorName: "John Green", date: "18-May-18", ISBN: "9182765439999", bookGenres: "Science,Romance")
+        let book1 = Book(bId: 1, bTitle: "Stephen Hawlking", bFCover: ["stephen"], bAuthor: "John Green", bAddedDate: "18-May-18", ISBN: "9182765431231", bGenres: "Horror,Romance,Novel")
+        let book2 = Book(bId: 2, bTitle: "Stephen Hawlking", bFCover: ["stephen"], bAuthor: "John Green", bAddedDate: "18-May-18", ISBN: "9182765456231", bGenres: "Novel,Fiction,Horror")
+        let book3 = Book(bId: 3, bTitle: "Stephen Hawlking", bFCover: ["stephen"], bAuthor: "John Green", bAddedDate: "18-May-18", ISBN: "9182765439999", bGenres: "Science,Romance")
         
         bookList.append(book1)
         bookList.append(book2)
@@ -41,20 +42,34 @@ class BooksViewController: UIViewController, UITableViewDataSource{
         navigationItem.searchController = searchController
     }
     
+    @IBAction func btnUpload(_ sender: Any) {
+        let uploadVC = storyboard?.instantiateViewController(withIdentifier: "uploadVC")
+        navigationController?.pushViewController(uploadVC!, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bookList.count
     }
     
+//    let bId : Int
+//    let bTitle : String
+//    let bFCover : [String]?
+//    let bAuthor : String
+//    let bAddedDate : String
+//    let ISBN : Int
+//    let bGenres : String
+
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {    
         let customTableCell = tableView.dequeueReusableCell(withIdentifier: "tableCell_Book") as! BookTableViewCell
         
-        customTableCell.bookTitle.text = bookList[indexPath.row].bookTitle
-        customTableCell.bookCoverImg.image = UIImage(named: bookList[indexPath.row].bookCover)
+        customTableCell.bookTitle.text = bookList[indexPath.row].bTitle
+        customTableCell.bookCoverImg.image = UIImage(named: bookList[indexPath.row].bFCover![0])
         customTableCell.ISBN.text = bookList[indexPath.row].ISBN
-        customTableCell.authorName.text = bookList[indexPath.row].authorName
-        customTableCell.addedDate.text = bookList[indexPath.row].date
+        customTableCell.authorName.text = bookList[indexPath.row].bAuthor
+        customTableCell.addedDate.text = bookList[indexPath.row].bAddedDate
         
-        let temp = self.splitString(bookList[indexPath.row].bookGenres)
+        let temp = self.splitString(bookList[indexPath.row].bGenres)
         if temp.count == 3 {
             customTableCell.genresText_1.isHidden = false
             customTableCell.genresText_2.isHidden = false
@@ -76,6 +91,12 @@ class BooksViewController: UIViewController, UITableViewDataSource{
         }
         
         return customTableCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let bookDetailVC = storyboard?.instantiateViewController(withIdentifier: "bookDetailVC")
+        navigationController?.pushViewController(bookDetailVC!, animated: true)
+        print("Selected index: \(indexPath.row)")
     }
     
     private func splitString(_ data: String) -> [Substring]{

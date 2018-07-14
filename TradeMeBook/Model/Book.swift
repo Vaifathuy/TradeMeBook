@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct Book {
-    let bookID : Int
-    let bookTitle : String
-    let bookCover : String
-    let authorName : String
-    let date : String
+struct Book: Decodable{
+    let bId : Int
+    let bTitle : String
+    let bFCover : [String]?
+    let bAuthor : String
+    let bAddedDate : String
     let ISBN : String
-    let bookGenres : String
+    let bGenres : String
 }
