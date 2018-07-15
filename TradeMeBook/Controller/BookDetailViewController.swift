@@ -41,9 +41,16 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var authorName: UITextField!
     @IBOutlet weak var bookImagesCollectionView: UICollectionView!
     @IBOutlet weak var otherSellersCollectionView: UICollectionView!
+    @IBOutlet weak var customerAlsoViewedCollectionView: UICollectionView!
+    @IBOutlet weak var customerAlsoViewedView: UIView!
     @IBOutlet weak var otherSellerView: UIView!
     
+    //--Constraints --
     
+    @IBOutlet weak var mainViewConstraint: NSLayoutConstraint!
+    
+    
+    //-- Sample Data --
     var bookImages : [UIImage] = [#imageLiteral(resourceName: "fangirl"),#imageLiteral(resourceName: "the7habits"),#imageLiteral(resourceName: "thesentinel")]
     var otherSellersSuggestionList = [sellersSuggestion(bookCover: #imageLiteral(resourceName: "fangirl"), sellerName: "Reaksmey"),
                                       sellersSuggestion(bookCover: #imageLiteral(resourceName: "fangirl"), sellerName: "Kunthea"),
@@ -52,6 +59,14 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
                                       sellersSuggestion(bookCover: #imageLiteral(resourceName: "fangirl"), sellerName: "John"),
                                       sellersSuggestion(bookCover: #imageLiteral(resourceName: "fangirl"), sellerName: "SivMey")
                                      ]
+    var customerAlsoViewedList = [sellersSuggestion(bookCover: #imageLiteral(resourceName: "thespace"), sellerName: "SivMey"),
+                                  sellersSuggestion(bookCover: #imageLiteral(resourceName: "eleanor"), sellerName: "Oudom"),
+                                  sellersSuggestion(bookCover: #imageLiteral(resourceName: "thehungergame"), sellerName: "Kunthea"),
+                                  sellersSuggestion(bookCover: #imageLiteral(resourceName: "theinfinitesea"), sellerName: "John"),
+                                  sellersSuggestion(bookCover: #imageLiteral(resourceName: "thefaultinourstar"), sellerName: "Terry"),
+                                  sellersSuggestion(bookCover: #imageLiteral(resourceName: "threehorror"), sellerName: "Sok Vannak")
+                                 ]
+    //------
     var bookTitle = ""
     
     override func viewDidLoad() {
@@ -67,7 +82,7 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
         decorateBGViews(genres: [ISBNView,sellerView,languageView], cornerRadius: 22.0, borderWidth: 1.5)
         decorateBGViews(genres: [titleView], cornerRadius: 18.0, borderWidth: 1.0)
         decorateBGViews(genres: [descriptionLabel,descriptionView], cornerRadius: 12.0, borderWidth: 1.5)
-        decorateBGViews(genres: [otherSellerView], cornerRadius: 22.0, borderWidth: 1.5)
+        decorateBGViews(genres: [otherSellerView, customerAlsoViewedView], cornerRadius: 22.0, borderWidth: 1.5)
         print(Constant.stateTextSize())
     }
     
@@ -143,12 +158,13 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
             otherSellersCollectionView.delegate = self
         }
         
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height = collectionView.frame.height
-        let width = collectionView.frame.height - ( collectionView.frame.height / 2 )
-        return CGSize(width: width, height: height)
+        if let flowLayoutFotCustomerViewed = customerAlsoViewedCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayoutFotCustomerViewed.scrollDirection = .horizontal
+            flowLayoutFotCustomerViewed.minimumLineSpacing = 0
+            customerAlsoViewedCollectionView.collectionViewLayout = flowLayoutFotCustomerViewed
+            customerAlsoViewedCollectionView.dataSource = self
+            customerAlsoViewedCollectionView.delegate = self
+        }
     }
     
     func setupNavBar() {
@@ -166,25 +182,39 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.bookImagesCollectionView {
             return bookImages.count
-        }else {
+        }else if collectionView == self.otherSellersCollectionView {
             return otherSellersSuggestionList.count
+        }else {
+            return customerAlsoViewedList.count
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == bookImagesCollectionView {
+        if collectionView == self.bookImagesCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bookImages_cell", for: indexPath) as! ImagesInBookDetailCollectionViewCell
             let bookImage = bookImages[indexPath.row]
             cell.bookImages.image = bookImage
             self.pageControl.currentPage = indexPath.row + 1
             return cell
-        }else {
+        }else if collectionView == self.otherSellersCollectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "othersellers_cell", for: indexPath) as! SuggestionCollectionViewCell
             let book = otherSellersSuggestionList[indexPath.row]
             cell.bookCoverImage.image = book.bookCover
             cell.sellerName.text = book.sellerName
             return cell
+        }else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customeralsoviewed_cell", for: indexPath) as! SuggestionCollectionViewCell
+            let book = customerAlsoViewedList[indexPath.row]
+            cell.bookCoverImage.image = book.bookCover
+            cell.sellerName.text = book.sellerName
+            return cell
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let height = collectionView.frame.height
+        let width = collectionView.frame.height - ( collectionView.frame.height / 2 )
+        return CGSize(width: width, height: height)
     }
 
 
