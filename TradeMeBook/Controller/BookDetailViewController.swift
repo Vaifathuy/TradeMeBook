@@ -21,6 +21,12 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var languageLabel: UILabel!
     //-----------------------
     
+    
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    @IBOutlet weak var stateLabel: UILabel!
+    @IBOutlet weak var qtyLabel: UILabel!
+    
     @IBOutlet weak var bookType: UILabel!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var pageControlBG: UIView!
@@ -60,10 +66,16 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
         genres3.text = "Fiction"
         authorName.text = "Rainbow Rowell"
         ratingImage.image = UIImage(named: "ic_rating_4.5_filled")
-        
+        //------
         ISBNLabel.text = "9856721345012"
         sellerName.text = "Helen Yogy"
         languageLabel.text = "ENG, CHN, ESP"
+        
+        //------
+        let currency = "$"
+        priceLabel.text = "10.9" + currency
+        qtyLabel.text = "28"
+        stateLabel.text = "NEW"  //NEW or OLD
     }
     
     func decoratePageControlForBookCover(){
