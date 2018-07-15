@@ -16,7 +16,7 @@ class BookUploadViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var descLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupProps([descLabel,descTextArea])
+        decorateViews([descLabel,descTextArea])
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(uploadBookCover))
         bookCoverView.isUserInteractionEnabled = true
         bookCoverView.addGestureRecognizer(tapGesture)
@@ -58,7 +58,7 @@ class BookUploadViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     
-    private func setupProps(_ sender: [UIView]) {
+    private func decorateViews(_ sender: [UIView]) {
         for s in sender{
             s.layer.borderColor = UIColor.orange.cgColor
             s.layer.borderWidth = 1

@@ -21,12 +21,16 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var languageLabel: UILabel!
     //-----------------------
     
-    
     @IBOutlet weak var priceLabel: UILabel!
-    
     @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var qtyLabel: UILabel!
+    //-------------------------
     
+    
+    @IBOutlet weak var descriptionView: UIView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    //-------------------------
     @IBOutlet weak var bookType: UILabel!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var pageControlBG: UIView!
@@ -51,6 +55,7 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
         decoratePageControlForBookCover()
         decorateBGViews(genres: [ISBNView,sellerView,languageView], cornerRadius: 22.0, borderWidth: 1.5)
         decorateBGViews(genres: [titleView], cornerRadius: 18.0, borderWidth: 1.0)
+        decorateBGViews(genres: [descriptionLabel,descriptionView], cornerRadius: 12.0, borderWidth: 1.0)
 
     }
     
