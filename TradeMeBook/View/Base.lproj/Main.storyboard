@@ -1988,19 +1988,19 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="102.5" translatesAutoresizingMaskIntoConstraints="NO" id="Duk-eP-cD2">
                                                         <rect key="frame" x="0.0" y="0.0" width="100.5" height="68"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="42"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="103" translatesAutoresizingMaskIntoConstraints="NO" id="eHd-Je-mDC">
                                                         <rect key="frame" x="103.5" y="0.0" width="101" height="68"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="42"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OLD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="102.5" translatesAutoresizingMaskIntoConstraints="NO" id="iov-v8-CWN">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OLD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="102.5" translatesAutoresizingMaskIntoConstraints="NO" id="iov-v8-CWN">
                                                         <rect key="frame" x="207.5" y="0.0" width="100.5" height="68"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="42"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -2089,6 +2089,7 @@
                         <outlet property="authorName" destination="agn-j7-7p2" id="OHp-OW-PTY"/>
                         <outlet property="bookImagesCollectionView" destination="tEy-rO-CMr" id="biL-PX-vlq"/>
                         <outlet property="bookType" destination="11E-ni-5x8" id="TKU-sr-FIL"/>
+                        <outlet property="descriptionContent" destination="gGJ-6G-YOi" id="ffw-63-3Pl"/>
                         <outlet property="descriptionLabel" destination="KKB-Pd-HUX" id="9ZS-ia-8Yj"/>
                         <outlet property="descriptionView" destination="hmH-W0-dGe" id="GD9-oL-Vq2"/>
                         <outlet property="genres1" destination="eQs-dE-Tln" id="mnT-H8-hAu"/>

@@ -26,9 +26,9 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var qtyLabel: UILabel!
     //-------------------------
     
-    
     @IBOutlet weak var descriptionView: UIView!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionContent: UITextView!
     
     //-------------------------
     @IBOutlet weak var bookType: UILabel!
@@ -57,6 +57,7 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
         decorateBGViews(genres: [titleView], cornerRadius: 18.0, borderWidth: 1.0)
         decorateBGViews(genres: [descriptionLabel,descriptionView], cornerRadius: 12.0, borderWidth: 1.0)
 
+        print(Constant.stateTextSize())
     }
     
     func fetchData(){
@@ -81,6 +82,14 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
         priceLabel.text = "10.9" + currency
         qtyLabel.text = "28"
         stateLabel.text = "NEW"  //NEW or OLD
+        
+        priceLabel.font = UIFont.boldSystemFont(ofSize: Constant.stateTextSize())
+        qtyLabel.font = UIFont.boldSystemFont(ofSize: Constant.stateTextSize())
+        stateLabel.font = UIFont.boldSystemFont(ofSize: Constant.stateTextSize())
+        
+        //-------
+        //descriptionContent.text = ""
+        
     }
     
     func decoratePageControlForBookCover(){
