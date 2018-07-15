@@ -27,4 +27,18 @@ struct Constant {
         }
     }
     
+    static func genresTextSize() -> CGFloat{
+        switch deviceWidth {
+        case 320:       //iphone 5
+            return 14
+        case 375:       //iphone 6, iphone X
+            return 16
+        case 414:       //iphone 6+
+            return 18
+        case 768:
+            return 20
+        default:
+            return 16
+        }
+    }
 }

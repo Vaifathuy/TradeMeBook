@@ -40,7 +40,18 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var ratingImage: UIImageView!
     @IBOutlet weak var authorName: UITextField!
     @IBOutlet weak var bookImagesCollectionView: UICollectionView!
+    @IBOutlet weak var otherSellersCollectionView: UICollectionView!
+    @IBOutlet weak var otherSellerView: UIView!
+    
+    
     var bookImages : [UIImage] = [#imageLiteral(resourceName: "fangirl"),#imageLiteral(resourceName: "the7habits"),#imageLiteral(resourceName: "thesentinel")]
+    var otherSellersSuggestionList = [sellersSuggestion(bookCover: #imageLiteral(resourceName: "fangirl"), sellerName: "Reaksmey"),
+                                      sellersSuggestion(bookCover: #imageLiteral(resourceName: "fangirl"), sellerName: "Kunthea"),
+                                      sellersSuggestion(bookCover: #imageLiteral(resourceName: "fangirl"), sellerName: "Boremey"),
+                                      sellersSuggestion(bookCover: #imageLiteral(resourceName: "fangirl"), sellerName: "Oudom"),
+                                      sellersSuggestion(bookCover: #imageLiteral(resourceName: "fangirl"), sellerName: "John"),
+                                      sellersSuggestion(bookCover: #imageLiteral(resourceName: "fangirl"), sellerName: "SivMey")
+                                     ]
     var bookTitle = ""
     
     override func viewDidLoad() {
@@ -55,8 +66,8 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
         decoratePageControlForBookCover()
         decorateBGViews(genres: [ISBNView,sellerView,languageView], cornerRadius: 22.0, borderWidth: 1.5)
         decorateBGViews(genres: [titleView], cornerRadius: 18.0, borderWidth: 1.0)
-        decorateBGViews(genres: [descriptionLabel,descriptionView], cornerRadius: 12.0, borderWidth: 1.0)
-
+        decorateBGViews(genres: [descriptionLabel,descriptionView], cornerRadius: 12.0, borderWidth: 1.5)
+        decorateBGViews(genres: [otherSellerView], cornerRadius: 22.0, borderWidth: 1.5)
         print(Constant.stateTextSize())
     }
     
@@ -70,6 +81,9 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
         genres1.text = "Love"
         genres2.text = "Teen"
         genres3.text = "Fiction"
+        genres1.font = UIFont.systemFont(ofSize: Constant.genresTextSize())
+        genres2.font = UIFont.systemFont(ofSize: Constant.genresTextSize())
+        genres3.font = UIFont.systemFont(ofSize: Constant.genresTextSize())
         authorName.text = "Rainbow Rowell"
         ratingImage.image = UIImage(named: "ic_rating_4.5_filled")
         //------
@@ -111,6 +125,7 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     func setupCollectionView() {
+        
         if let flowLayout = bookImagesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.scrollDirection = .horizontal
             flowLayout.minimumLineSpacing = 2.0
@@ -118,6 +133,22 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
             bookImagesCollectionView.isPagingEnabled = true
             bookImagesCollectionView.dataSource = self
         }
+        
+        if let flowLayoutForOtherSeller = otherSellersCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayoutForOtherSeller.scrollDirection = .horizontal
+            flowLayoutForOtherSeller.minimumLineSpacing = 0
+            flowLayoutForOtherSeller.minimumInteritemSpacing = 0
+            otherSellersCollectionView.collectionViewLayout = flowLayoutForOtherSeller
+            otherSellersCollectionView.dataSource = self
+            otherSellersCollectionView.delegate = self
+        }
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let height = collectionView.frame.height
+        let width = collectionView.frame.height - ( collectionView.frame.height / 2 )
+        return CGSize(width: width, height: height)
     }
     
     func setupNavBar() {
@@ -133,18 +164,35 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return bookImages.count
+        if collectionView == self.bookImagesCollectionView {
+            return bookImages.count
+        }else {
+            return otherSellersSuggestionList.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bookImages_cell", for: indexPath) as! ImagesInBookDetailCollectionViewCell
-        let bookImage = bookImages[indexPath.row]
-        cell.bookImages.image = bookImage
-        self.pageControl.currentPage = indexPath.row + 1
-        return cell
+        if collectionView == bookImagesCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bookImages_cell", for: indexPath) as! ImagesInBookDetailCollectionViewCell
+            let bookImage = bookImages[indexPath.row]
+            cell.bookImages.image = bookImage
+            self.pageControl.currentPage = indexPath.row + 1
+            return cell
+        }else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "othersellers_cell", for: indexPath) as! SuggestionCollectionViewCell
+            let book = otherSellersSuggestionList[indexPath.row]
+            cell.bookCoverImage.image = book.bookCover
+            cell.sellerName.text = book.sellerName
+            return cell
+        }
     }
 
 
     @IBAction func btnBuynow(_ sender: Any) {
     }
+}
+
+struct sellersSuggestion {
+    let bookCover : UIImage
+    let sellerName : String
 }
