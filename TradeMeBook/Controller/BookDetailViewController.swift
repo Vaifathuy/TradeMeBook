@@ -21,25 +21,26 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var languageLabel: UILabel!
     //-----------------------
     
+    @IBOutlet weak var bookType: UILabel!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var pageControlBG: UIView!
     @IBOutlet weak var genres3: UITextField!
     @IBOutlet weak var genres2: UITextField!
     @IBOutlet weak var genres1: UITextField!
     @IBOutlet weak var ratingImage: UIImageView!
-    @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var authorName: UITextField!
     @IBOutlet weak var bookImagesCollectionView: UICollectionView!
     var bookImages : [UIImage] = [#imageLiteral(resourceName: "fangirl"),#imageLiteral(resourceName: "the7habits"),#imageLiteral(resourceName: "thesentinel")]
+    var bookTitle = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchData()
+        bindData()
         setupNavBar()
         setupCollectionView()
-        fetchData()
         decorateBGViews(genres: [genres1,genres2,genres3], cornerRadius: 14.0, borderWidth: 1.0 )
         decorateBGViews(genres: [authorName], cornerRadius: 9, borderWidth: 1.0)
-        bookTitle.text = "Fangirl"
         
         decoratePageControlForBookCover()
         decorateBGViews(genres: [ISBNView,sellerView,languageView], cornerRadius: 22.0, borderWidth: 1.5)
@@ -49,6 +50,20 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
     
     func fetchData(){
         
+    }
+    
+    func bindData(){
+        bookTitle = "Fangirl"
+        bookType.text = "Paperback"
+        genres1.text = "Love"
+        genres2.text = "Teen"
+        genres3.text = "Fiction"
+        authorName.text = "Rainbow Rowell"
+        ratingImage.image = UIImage(named: "ic_rating_4.5_filled")
+        
+        ISBNLabel.text = "9856721345012"
+        sellerName.text = "Helen Yogy"
+        languageLabel.text = "ENG, CHN, ESP"
     }
     
     func decoratePageControlForBookCover(){
@@ -83,7 +98,7 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
         let ReviewBarButton = UIBarButtonItem()
         
         //Navigation Title: based on the type of book - Paperback, Hardcover
-        navigationItem.title = "Paper"
+        navigationItem.title = self.bookTitle
         
         //RightBarButton
         ReviewBarButton.title = "Review"

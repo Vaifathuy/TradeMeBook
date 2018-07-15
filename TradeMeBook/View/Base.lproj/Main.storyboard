@@ -594,7 +594,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="bHT-tm-b9Z" secondAttribute="trailing" id="znX-Wg-rH3"/>
                                                 </constraints>
                                             </view>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cH-nC-yjZ">
+                                            <containerView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cH-nC-yjZ">
                                                 <rect key="frame" x="10" y="224" width="300" height="222"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="222" id="dRH-ii-Z4v"/>
@@ -613,10 +613,10 @@
                                                 <color key="textColor" red="0.97254901959999995" green="0.61960784310000006" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C0o-8l-M9V">
+                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C0o-8l-M9V">
                                                 <rect key="frame" x="8" y="501" width="304" height="180"/>
                                                 <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="g7c-qt-tYw">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7c-qt-tYw">
                                                         <rect key="frame" x="6" y="0.0" width="292" height="175"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2002,7 +2002,7 @@
                         <outlet property="ISBNView" destination="i6Z-xh-zwN" id="tUd-zp-fb6"/>
                         <outlet property="authorName" destination="agn-j7-7p2" id="OHp-OW-PTY"/>
                         <outlet property="bookImagesCollectionView" destination="tEy-rO-CMr" id="biL-PX-vlq"/>
-                        <outlet property="bookTitle" destination="11E-ni-5x8" id="gqF-he-Cgf"/>
+                        <outlet property="bookType" destination="11E-ni-5x8" id="TKU-sr-FIL"/>
                         <outlet property="genres1" destination="eQs-dE-Tln" id="mnT-H8-hAu"/>
                         <outlet property="genres2" destination="WEB-ot-NTP" id="4hd-20-pww"/>
                         <outlet property="genres3" destination="Khx-om-UVV" id="VNk-hH-tmt"/>
