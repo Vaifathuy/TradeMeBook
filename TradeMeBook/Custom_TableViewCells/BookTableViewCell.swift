@@ -31,6 +31,13 @@ class BookTableViewCell: UITableViewCell{
         return textField
     }
     
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        if highlighted == true {
+            self.backgroundColor = UIColor.orange
+        }else {
+            self.backgroundColor = UIColor.white
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         setupGenresTextField()
@@ -55,5 +62,11 @@ class BookTableViewCell: UITableViewCell{
         genresText_2.layer.borderColor = UIColor.orange.cgColor
         genresText_3.layer.borderColor = UIColor.orange.cgColor
         bgView.layer.borderColor = UIColor.orange.cgColor
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        if selected == false {
+            selectionStyle = .none
+        }
     }
 }

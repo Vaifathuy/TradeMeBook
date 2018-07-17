@@ -181,6 +181,7 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.bookImagesCollectionView {
+            pageControl.numberOfPages = bookImages.count
             return bookImages.count
         }else if collectionView == self.otherSellersCollectionView {
             return otherSellersSuggestionList.count
@@ -189,12 +190,13 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
         }
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.bookImagesCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bookImages_cell", for: indexPath) as! ImagesInBookDetailCollectionViewCell
             let bookImage = bookImages[indexPath.row]
+            print(indexPath.row)
             cell.bookImages.image = bookImage
-            self.pageControl.currentPage = indexPath.row + 1
             return cell
         }else if collectionView == self.otherSellersCollectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "othersellers_cell", for: indexPath) as! SuggestionCollectionViewCell
