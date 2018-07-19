@@ -35,7 +35,7 @@ class BuyNowViewController: UIViewController {
         setupNavBar()
         decorateView(for: [HeaderView,deliveryInfoView], borderWidth: 1.0, borderRadius: 22.0)
         decorateView(for: [bookTypeView], borderWidth: 1.0, borderRadius: 18.0)
-        decorateView(for: [addressTextField,contactTextField,checkoutPinTextField], borderWidth: 1.0, borderRadius: 20.0)
+        decorateView(for: [addressTextField,contactTextField,checkoutPinTextField], borderWidth: 1.0, borderRadius: 16.0)
         bindData()
         dynamicTextSizeWithRegularFont(label: [titleLabel,ISBNLabel,sellerLabel,qtyLabel])
         dynamicTextSizeWithBoldFont(label: [bookTitle,ISBN,seller,qty,bookTypeLabel])
