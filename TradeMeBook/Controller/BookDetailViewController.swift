@@ -221,6 +221,8 @@ class BookDetailViewController: UIViewController, UICollectionViewDataSource, UI
 
 
     @IBAction func btnBuynow(_ sender: Any) {
+        let VC = storyboard?.instantiateViewController(withIdentifier: "buyNowVC") as! BuyNowViewController
+        navigationController?.pushViewController(VC, animated: true)
     }
 }
 

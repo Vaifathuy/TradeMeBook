@@ -25,6 +25,7 @@
 		1EE3A92E20B52984008BB95A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3A92D20B52984008BB95A /* LoginViewController.swift */; };
 		E8325DE920C9568100B2BAA6 /* StaticBookUploadTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8325DE820C9568100B2BAA6 /* StaticBookUploadTableViewController.swift */; };
 		E83A843620DE03AA0054FDD8 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83A843520DE03AA0054FDD8 /* BookDetailViewController.swift */; };
+		E84D4FED20FF639F0090C062 /* BuyNowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D4FEC20FF639F0090C062 /* BuyNowViewController.swift */; };
 		E883C46320C8C8A800E49696 /* BookUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883C46220C8C8A800E49696 /* BookUploadViewController.swift */; };
 		E8CA803520FB55F5004F602F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CA803420FB55F5004F602F /* Constant.swift */; };
 		E8CA803720FB622C004F602F /* SuggestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CA803620FB622C004F602F /* SuggestionCollectionViewCell.swift */; };
@@ -55,6 +56,7 @@
 		1EE3A92D20B52984008BB95A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E8325DE820C9568100B2BAA6 /* StaticBookUploadTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticBookUploadTableViewController.swift; sourceTree = "<group>"; };
 		E83A843520DE03AA0054FDD8 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		E84D4FEC20FF639F0090C062 /* BuyNowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyNowViewController.swift; sourceTree = "<group>"; };
 		E883C46220C8C8A800E49696 /* BookUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookUploadViewController.swift; sourceTree = "<group>"; };
 		E8CA803420FB55F5004F602F /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		E8CA803620FB622C004F602F /* SuggestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				E8F552C120DC1B16003C6C16 /* StaticMoreTableViewController.swift */,
 				E8F552C420DC2112003C6C16 /* AboutUsViewController.swift */,
 				E83A843520DE03AA0054FDD8 /* BookDetailViewController.swift */,
+				E84D4FEC20FF639F0090C062 /* BuyNowViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				E8F552C220DC1B16003C6C16 /* StaticMoreTableViewController.swift in Sources */,
 				1E8D224320B026210010A5AF /* RootPageViewController.swift in Sources */,
 				E8325DE920C9568100B2BAA6 /* StaticBookUploadTableViewController.swift in Sources */,
+				E84D4FED20FF639F0090C062 /* BuyNowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

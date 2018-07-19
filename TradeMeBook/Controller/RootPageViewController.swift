@@ -31,7 +31,7 @@ class RootPageViewController: UIPageViewController, UIPageViewControllerDataSour
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
-        guard let currentVCIndex = self.viewList.index(of: viewController) else { return nil}
+        guard let currentVCIndex = viewList.index(of: viewController) else { return nil}
         let previousIndex = currentVCIndex - 1
         guard previousIndex >= 0 else { return nil }
         guard viewList.count > previousIndex else {return nil}
@@ -41,7 +41,7 @@ class RootPageViewController: UIPageViewController, UIPageViewControllerDataSour
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
-        guard let currentVCIndex = self.viewList.index(of: viewController) else { return nil }
+        guard let currentVCIndex = viewList.index(of: viewController) else { return nil }
         let nextIndex = currentVCIndex + 1
         guard nextIndex < self.viewList.count else { return nil }
         

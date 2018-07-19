@@ -41,4 +41,19 @@ struct Constant {
             return 16
         }
     }
+    
+    static func buyNowViewTextSize() -> CGFloat{
+        switch deviceWidth {
+        case 320:       //iphone 5
+            return 15
+        case 375:       //iphone 6, iphone X
+            return 16
+        case 414:       //iphone 6+
+            return 17
+        case 768:
+            return 18
+        default:
+            return 16
+        }
+    }
 }
