@@ -2657,12 +2657,83 @@
                                     <constraint firstItem="bVo-jT-XXk" firstAttribute="leading" secondItem="duA-RD-Ap9" secondAttribute="leading" constant="8" id="zXp-eA-suj"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dyi-N8-sgp">
+                                <rect key="frame" x="8" y="426" width="304" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYJ-g5-RmL">
+                                        <rect key="frame" x="12" y="3" width="153" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="153" id="p6J-Si-fnQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VZC-uJ-rft">
+                                        <rect key="frame" x="12" y="27.5" width="280" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Vjf-XG-kuD"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contact" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SWK-qe-BQW">
+                                        <rect key="frame" x="12" y="61.5" width="280" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="z21-se-AVe"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BYJ-g5-RmL" firstAttribute="top" secondItem="Dyi-N8-sgp" secondAttribute="top" constant="3" id="22d-Al-Kg8"/>
+                                    <constraint firstItem="BYJ-g5-RmL" firstAttribute="leading" secondItem="Dyi-N8-sgp" secondAttribute="leading" constant="12" id="3rX-nU-BtR"/>
+                                    <constraint firstItem="VZC-uJ-rft" firstAttribute="top" secondItem="BYJ-g5-RmL" secondAttribute="bottom" constant="4" id="7O5-tv-mMO"/>
+                                    <constraint firstItem="SWK-qe-BQW" firstAttribute="leading" secondItem="Dyi-N8-sgp" secondAttribute="leading" constant="12" id="Wv3-v9-uab"/>
+                                    <constraint firstItem="VZC-uJ-rft" firstAttribute="leading" secondItem="Dyi-N8-sgp" secondAttribute="leading" constant="12" id="erP-6Z-lIJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="VZC-uJ-rft" secondAttribute="trailing" constant="12" id="hqx-54-Cp5"/>
+                                    <constraint firstItem="SWK-qe-BQW" firstAttribute="top" secondItem="VZC-uJ-rft" secondAttribute="bottom" constant="4" id="ocu-Hg-WAh"/>
+                                    <constraint firstAttribute="height" constant="100" id="qiO-hH-bbR"/>
+                                    <constraint firstAttribute="trailing" secondItem="SWK-qe-BQW" secondAttribute="trailing" constant="12" id="s4B-wm-0jL"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Checkout PIN" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gji-p9-vJA">
+                                <rect key="frame" x="21" y="534" width="216" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6BZ-CK-fY4"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYE-J8-SG8">
+                                <rect key="frame" x="249" y="534" width="61" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FxY-ZO-F64"/>
+                                    <constraint firstAttribute="width" constant="61" id="kM6-zd-pic"/>
+                                </constraints>
+                                <state key="normal" title="BUY" image="btnBuy"/>
+                                <connections>
+                                    <action selector="btnBuy:" destination="YOI-qy-vSk" eventType="touchUpInside" id="5Nb-km-5oK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2h5-k4-20S" firstAttribute="trailing" secondItem="duA-RD-Ap9" secondAttribute="trailing" constant="8" id="2I4-eE-tNq"/>
                             <constraint firstItem="duA-RD-Ap9" firstAttribute="top" secondItem="2h5-k4-20S" secondAttribute="top" id="2aC-i9-09v"/>
+                            <constraint firstItem="gYE-J8-SG8" firstAttribute="top" secondItem="Dyi-N8-sgp" secondAttribute="bottom" constant="8" id="5Q5-0h-N7i"/>
+                            <constraint firstItem="gYE-J8-SG8" firstAttribute="leading" secondItem="gji-p9-vJA" secondAttribute="trailing" constant="12" id="FhD-QY-NCk"/>
+                            <constraint firstItem="Dyi-N8-sgp" firstAttribute="leading" secondItem="2h5-k4-20S" secondAttribute="leading" constant="8" id="SU4-Ql-hOK"/>
+                            <constraint firstItem="2h5-k4-20S" firstAttribute="trailing" secondItem="Dyi-N8-sgp" secondAttribute="trailing" constant="8" id="UB2-Y7-AL2"/>
                             <constraint firstItem="duA-RD-Ap9" firstAttribute="leading" secondItem="2h5-k4-20S" secondAttribute="leading" constant="8" id="k6T-T2-R0O"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gji-p9-vJA" secondAttribute="trailing" constant="67" id="kAF-Eo-dmN"/>
+                            <constraint firstItem="gji-p9-vJA" firstAttribute="leading" secondItem="2h5-k4-20S" secondAttribute="leading" constant="21" id="l23-pA-a2E"/>
+                            <constraint firstItem="Dyi-N8-sgp" firstAttribute="top" secondItem="duA-RD-Ap9" secondAttribute="bottom" constant="6" id="oU2-tq-9eN"/>
+                            <constraint firstItem="gji-p9-vJA" firstAttribute="top" secondItem="Dyi-N8-sgp" secondAttribute="bottom" constant="8" id="qiP-QM-4ht"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2h5-k4-20S"/>
                     </view>
@@ -2670,12 +2741,16 @@
                         <outlet property="HeaderView" destination="duA-RD-Ap9" id="jaj-id-55H"/>
                         <outlet property="ISBN" destination="0EN-Qw-Ycp" id="e3D-Lk-LWL"/>
                         <outlet property="ISBNLabel" destination="k6x-Uc-5AT" id="kpY-TW-6GZ"/>
+                        <outlet property="addressTextField" destination="VZC-uJ-rft" id="fHI-xB-Ct7"/>
                         <outlet property="bookCover" destination="BKA-c8-Neq" id="ixS-4W-mgk"/>
                         <outlet property="bookTitle" destination="6mh-I9-wA9" id="bhZ-DP-586"/>
                         <outlet property="bookTypeLabel" destination="a5z-gs-gCb" id="ROc-Y2-t5v"/>
                         <outlet property="bookTypeView" destination="opm-OM-dEg" id="P3z-mi-5sj"/>
                         <outlet property="btnDecrease" destination="PdV-r7-LfO" id="jLQ-0J-Nyv"/>
+                        <outlet property="checkoutPinTextField" destination="gji-p9-vJA" id="JgT-hR-lYo"/>
+                        <outlet property="contactTextField" destination="SWK-qe-BQW" id="rmZ-46-e3U"/>
                         <outlet property="dateLabel" destination="Q99-dl-KAd" id="RGc-53-WQ3"/>
+                        <outlet property="deliveryInfoView" destination="Dyi-N8-sgp" id="nDM-Hb-sW6"/>
                         <outlet property="priceTagLabel" destination="QHs-fS-UkE" id="Blw-7b-Vy4"/>
                         <outlet property="qty" destination="Cbc-id-1fq" id="EJM-QL-dUy"/>
                         <outlet property="qtyLabel" destination="Fnx-gz-Hjk" id="7zh-BA-mub"/>
@@ -2696,6 +2771,7 @@
         <image name="Logo" width="5216" height="5216"/>
         <image name="account_icon" width="30" height="30"/>
         <image name="book_icon" width="30" height="30"/>
+        <image name="btnBuy" width="1314" height="675"/>
         <image name="btnBuynow" width="1614" height="676"/>
         <image name="btnClose" width="1509" height="1509"/>
         <image name="btnLogin" width="1449" height="675"/>

@@ -10,6 +10,10 @@ import UIKit
 
 class BuyNowViewController: UIViewController {
 
+    @IBOutlet weak var checkoutPinTextField: UITextField!
+    @IBOutlet weak var contactTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var deliveryInfoView: UIView!
     @IBOutlet weak var qty: UILabel!
     @IBOutlet weak var seller: UILabel!
     @IBOutlet weak var ISBN: UILabel!
@@ -29,13 +33,9 @@ class BuyNowViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
-        HeaderView.layer.borderColor = UIColor.orange.cgColor
-        HeaderView.layer.borderWidth = 1.0
-        HeaderView.layer.cornerRadius = 22.0
-        
-        bookTypeView.layer.borderColor = UIColor.orange.cgColor
-        bookTypeView.layer.borderWidth = 1.0
-        bookTypeView.layer.cornerRadius = 18.0
+        decorateView(for: [HeaderView,deliveryInfoView], borderWidth: 1.0, borderRadius: 22.0)
+        decorateView(for: [bookTypeView], borderWidth: 1.0, borderRadius: 18.0)
+        decorateView(for: [addressTextField,contactTextField,checkoutPinTextField], borderWidth: 1.0, borderRadius: 20.0)
         bindData()
         dynamicTextSizeWithRegularFont(label: [titleLabel,ISBNLabel,sellerLabel,qtyLabel])
         dynamicTextSizeWithBoldFont(label: [bookTitle,ISBN,seller,qty,bookTypeLabel])
@@ -73,6 +73,18 @@ class BuyNowViewController: UIViewController {
         for l in label {
             l.font = UIFont.boldSystemFont(ofSize: Constant.buyNowViewTextSize())
         }
+    }
+    
+    func decorateView(for views: [UIView], borderWidth: CGFloat, borderRadius: CGFloat){
+        for view in views {
+            view.layer.borderColor = UIColor.orange.cgColor
+            view.layer.borderWidth = borderWidth
+            view.layer.cornerRadius = borderRadius
+        }
+    }
+    
+    
+    @IBAction func btnBuy(_ sender: Any) {
     }
     
     @IBAction func btnIncrease(_ sender: Any) {
