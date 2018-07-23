@@ -23,6 +23,7 @@
 		1ECF2A7020B6EB34000CF2D8 /* UserDefaultExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECF2A6F20B6EB34000CF2D8 /* UserDefaultExtend.swift */; };
 		1EDA189220BA7B1F007CB0A9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDA189120BA7B1F007CB0A9 /* SignUpViewController.swift */; };
 		1EE3A92E20B52984008BB95A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3A92D20B52984008BB95A /* LoginViewController.swift */; };
+		84F36754C869D56EF81ECCC5 /* Pods_TradeMeBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97E14B8D6BE4870853A2C39 /* Pods_TradeMeBook.framework */; };
 		E8325DE920C9568100B2BAA6 /* StaticBookUploadTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8325DE820C9568100B2BAA6 /* StaticBookUploadTableViewController.swift */; };
 		E83A843620DE03AA0054FDD8 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83A843520DE03AA0054FDD8 /* BookDetailViewController.swift */; };
 		E84D4FED20FF639F0090C062 /* BuyNowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D4FEC20FF639F0090C062 /* BuyNowViewController.swift */; };
@@ -31,6 +32,7 @@
 		E8CA803720FB622C004F602F /* SuggestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CA803620FB622C004F602F /* SuggestionCollectionViewCell.swift */; };
 		E8DF0D6D20C55FA600190AA1 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF0D6C20C55FA600190AA1 /* Book.swift */; };
 		E8EE92A620E941390016978F /* ImagesInBookDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE92A520E941390016978F /* ImagesInBookDetailCollectionViewCell.swift */; };
+		E8F080702105AAD100CE53B9 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F0806F2105AAD100CE53B9 /* CommunityViewController.swift */; };
 		E8F552C220DC1B16003C6C16 /* StaticMoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F552C120DC1B16003C6C16 /* StaticMoreTableViewController.swift */; };
 		E8F552C520DC2112003C6C16 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F552C420DC2112003C6C16 /* AboutUsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +41,7 @@
 		1E17329620BC321B00E350F5 /* Book_TableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Book_TableCell.xib; sourceTree = "<group>"; };
 		1E17329820BC325700E350F5 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		1E516D3A20BD80780037ED69 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		1E8963C0A0C89AAF0BD8B4B8 /* Pods-TradeMeBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeMeBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradeMeBook/Pods-TradeMeBook.release.xcconfig"; sourceTree = "<group>"; };
 		1E8D222A20B024720010A5AF /* TradeMeBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeMeBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E8D222D20B024720010A5AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E8D223220B024720010A5AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +57,8 @@
 		1ECF2A6F20B6EB34000CF2D8 /* UserDefaultExtend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtend.swift; sourceTree = "<group>"; };
 		1EDA189120BA7B1F007CB0A9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1EE3A92D20B52984008BB95A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		27823D0ED1A1F72E73A7E987 /* Pods-TradeMeBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeMeBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TradeMeBook/Pods-TradeMeBook.debug.xcconfig"; sourceTree = "<group>"; };
+		D97E14B8D6BE4870853A2C39 /* Pods_TradeMeBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TradeMeBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8325DE820C9568100B2BAA6 /* StaticBookUploadTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticBookUploadTableViewController.swift; sourceTree = "<group>"; };
 		E83A843520DE03AA0054FDD8 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		E84D4FEC20FF639F0090C062 /* BuyNowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyNowViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 		E8CA803620FB622C004F602F /* SuggestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		E8DF0D6C20C55FA600190AA1 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		E8EE92A520E941390016978F /* ImagesInBookDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesInBookDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		E8F0806F2105AAD100CE53B9 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		E8F552C120DC1B16003C6C16 /* StaticMoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticMoreTableViewController.swift; sourceTree = "<group>"; };
 		E8F552C420DC2112003C6C16 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,12 +77,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F36754C869D56EF81ECCC5 /* Pods_TradeMeBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		168B05541AD91FE6914171C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D97E14B8D6BE4870853A2C39 /* Pods_TradeMeBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1E17329520BC31DA00E350F5 /* Custom_TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +106,8 @@
 			children = (
 				1E8D222C20B024720010A5AF /* TradeMeBook */,
 				1E8D222B20B024720010A5AF /* Products */,
+				8BFFAFD33F1EBBEA1FFAA53C /* Pods */,
+				168B05541AD91FE6914171C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +169,7 @@
 				E8F552C420DC2112003C6C16 /* AboutUsViewController.swift */,
 				E83A843520DE03AA0054FDD8 /* BookDetailViewController.swift */,
 				E84D4FEC20FF639F0090C062 /* BuyNowViewController.swift */,
+				E8F0806F2105AAD100CE53B9 /* CommunityViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,6 +185,15 @@
 			path = Custom_CollectionViewCells;
 			sourceTree = "<group>";
 		};
+		8BFFAFD33F1EBBEA1FFAA53C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27823D0ED1A1F72E73A7E987 /* Pods-TradeMeBook.debug.xcconfig */,
+				1E8963C0A0C89AAF0BD8B4B8 /* Pods-TradeMeBook.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,9 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E8D223C20B024740010A5AF /* Build configuration list for PBXNativeTarget "TradeMeBook" */;
 			buildPhases = (
+				132A226FC0CE2C2D529B0BC1 /* [CP] Check Pods Manifest.lock */,
 				1E8D222620B024720010A5AF /* Sources */,
 				1E8D222720B024720010A5AF /* Frameworks */,
 				1E8D222820B024720010A5AF /* Resources */,
+				3B332B8DE6CF764E0DFBD619 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,6 +265,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		132A226FC0CE2C2D529B0BC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TradeMeBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B332B8DE6CF764E0DFBD619 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TradeMeBook/Pods-TradeMeBook-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Auk/Auk.framework",
+				"${BUILT_PRODUCTS_DIR}/moa/moa.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Auk.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/moa.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TradeMeBook/Pods-TradeMeBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1E8D222620B024720010A5AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,6 +331,7 @@
 				E8F552C220DC1B16003C6C16 /* StaticMoreTableViewController.swift in Sources */,
 				1E8D224320B026210010A5AF /* RootPageViewController.swift in Sources */,
 				E8325DE920C9568100B2BAA6 /* StaticBookUploadTableViewController.swift in Sources */,
+				E8F080702105AAD100CE53B9 /* CommunityViewController.swift in Sources */,
 				E84D4FED20FF639F0090C062 /* BuyNowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +474,7 @@
 		};
 		1E8D223D20B024740010A5AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27823D0ED1A1F72E73A7E987 /* Pods-TradeMeBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -423,6 +495,7 @@
 		};
 		1E8D223E20B024740010A5AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E8963C0A0C89AAF0BD8B4B8 /* Pods-TradeMeBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

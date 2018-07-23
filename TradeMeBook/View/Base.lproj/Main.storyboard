@@ -1022,18 +1022,63 @@
         <!--Community-->
         <scene sceneID="joO-jz-kVq">
             <objects>
-                <viewController storyboardIdentifier="Community" id="ZVo-ve-4yY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Community" id="ZVo-ve-4yY" customClass="CommunityViewController" customModule="TradeMeBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E1I-Gs-pVh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kvd-Zs-gay">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhf-T2-eTf" userLabel="MainView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
+                                        <subviews>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPp-PK-8xm" userLabel="AdsSlider">
+                                                <rect key="frame" x="8" y="8" width="304" height="138"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="138" id="6p1-az-T3j"/>
+                                                </constraints>
+                                            </scrollView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="SPp-PK-8xm" secondAttribute="trailing" constant="8" id="8oT-Kg-HI0"/>
+                                            <constraint firstAttribute="height" constant="700" id="8rE-Qq-2Pt"/>
+                                            <constraint firstItem="SPp-PK-8xm" firstAttribute="leading" secondItem="dhf-T2-eTf" secondAttribute="leading" constant="8" id="B9J-ZN-eQQ"/>
+                                            <constraint firstItem="SPp-PK-8xm" firstAttribute="top" secondItem="dhf-T2-eTf" secondAttribute="top" constant="8" id="NMS-JH-GW8"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dhf-T2-eTf" firstAttribute="top" secondItem="kvd-Zs-gay" secondAttribute="top" id="Asr-0W-GUX"/>
+                                    <constraint firstItem="dhf-T2-eTf" firstAttribute="width" secondItem="kvd-Zs-gay" secondAttribute="width" id="LbL-ys-Zyl"/>
+                                    <constraint firstAttribute="bottom" secondItem="dhf-T2-eTf" secondAttribute="bottom" id="NMh-ZK-R44"/>
+                                    <constraint firstItem="dhf-T2-eTf" firstAttribute="leading" secondItem="kvd-Zs-gay" secondAttribute="leading" id="a5q-Io-SUE"/>
+                                    <constraint firstAttribute="trailing" secondItem="dhf-T2-eTf" secondAttribute="trailing" id="cwy-zZ-g3g"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lEW-Hu-W9g" firstAttribute="bottom" secondItem="kvd-Zs-gay" secondAttribute="bottom" id="gdt-4E-57c"/>
+                            <constraint firstItem="lEW-Hu-W9g" firstAttribute="trailing" secondItem="kvd-Zs-gay" secondAttribute="trailing" id="nTF-bU-7sc"/>
+                            <constraint firstItem="kvd-Zs-gay" firstAttribute="top" secondItem="lEW-Hu-W9g" secondAttribute="top" id="rR8-kC-OYq"/>
+                            <constraint firstItem="kvd-Zs-gay" firstAttribute="leading" secondItem="lEW-Hu-W9g" secondAttribute="leading" id="wUA-VR-Pup"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lEW-Hu-W9g"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Community" id="h1u-Ay-YCh"/>
+                    <navigationItem key="navigationItem" title="Community" id="h1u-Ay-YCh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="FCT-3m-juW">
+                            <color key="tintColor" red="0.97254901959999995" green="0.61960784310000006" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="adsSlider" destination="SPp-PK-8xm" id="Fgl-mT-6W3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMf-ne-FmI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4038" y="852"/>
+            <point key="canvasLocation" x="4837.5" y="850.35211267605632"/>
         </scene>
         <!--More-->
         <scene sceneID="1k5-Rd-nBQ">

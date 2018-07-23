@@ -41,6 +41,8 @@ class BuyNowViewController: UIViewController {
         dynamicTextSizeWithBoldFont(label: [bookTitle,ISBN,seller,qty,bookTypeLabel])
         priceTagLabel.font = UIFont.boldSystemFont(ofSize: Constant.stateTextSize())
         stateTagLabel.font = UIFont.boldSystemFont(ofSize: Constant.stateTextSize())
+        
+        
     }
     
     func bindData(){
